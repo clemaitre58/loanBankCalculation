@@ -30,7 +30,7 @@ def cal_capital_enpruntable(m, t, n):
 def cal_frais_notaire(C):
     C_tot = C * 1.076
     C_tot += 1200
-    return
+    return C_tot
 
 def cal_prix_hors_frais(C_tot):
     C = C_tot - 1200

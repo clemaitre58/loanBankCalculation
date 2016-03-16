@@ -11,7 +11,7 @@ from bank_utils import *
 #capital_emprunte = 100000
 #duree_tot = 20*12
 taux_annuel = 4/100.
-capital_emprunte = 116519
+capital_emprunte = 134000
 duree_tot = 16 * 12.
 
 val_amort_init = amortissement_init(capital_emprunte, taux_annuel, duree_tot)
@@ -36,12 +36,12 @@ print "Mensualite 20, 2.5, 142000 : " + str(cal_mensualite(142000, 2.5/100., 240
 # plt.plot(tab_amortissement)
 # plt.plot(part_interet)
 # plt.show()
-print "Capital empruntable 950 : " + str(cal_capital_enpruntable(950, 2.55/100., 240))
+print "Capital empruntable 950 : " + str(cal_capital_enpruntable(950, 2/100., 240))
 duree_tot = 20
 p1 = 6.5
-taux_annuel = 2.55/100.
+taux_annuel = 2/100.
 taux_annuel_p1 = 3.5/100.
-val_mens_fin, val_mens_debut = cal_mens_lisse(150000, 800, p1*12, duree_tot*12,
+val_mens_fin, val_mens_debut = cal_mens_lisse(cal_frais_notaire(134000), 700, p1*12, duree_tot*12,
                                               taux_annuel/12., taux_annuel_p1/12)
 
-print "Exemple de 150000 sur 20 ans avec un palier de 500 après " + str(p1) + " ans. début : " + str(val_mens_debut) + " Fin : " + str(val_mens_fin)
+print "Exemple de 134 000 sur 20 ans avec un palier de 500 après " + str(p1) + " ans. début : " + str(val_mens_debut) + " Fin : " + str(val_mens_fin)

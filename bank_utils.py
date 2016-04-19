@@ -61,14 +61,14 @@ def cal_mens_lisse(C0, mens_p1, nb_mens_p1, nb_mens_tot, t, t_p1):
     #else :
     num = C0 * t + mens_p1 * (1-np.power((1+t), val_pw_num))
     denum = 1-np.power(1+t, -1*nb_mens_tot)
-    print num
-    print denum
-    print C0
-    print mens_p1
-    print t_p1
-    print nb_mens_p1
-    print t
-    print nb_mens_tot
+    #print num
+    #print denum
+    #print C0
+    #print mens_p1
+    #print t_p1
+    #print nb_mens_p1
+    #print t
+    #print nb_mens_tot
     val_mens_lisse = num/denum
     val_mens_pp1 = val_mens_lisse - mens_p1
 

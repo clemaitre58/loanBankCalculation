@@ -37,11 +37,13 @@ print "Mensualite 20, 2.5, 142000 : " + str(cal_mensualite(142000, 2.5/100., 240
 # plt.plot(part_interet)
 # plt.show()
 print "Capital empruntable 950 : " + str(cal_capital_enpruntable(950, 2/100., 240))
-duree_tot = 20
-p1 = 6.5
+duree_tot = 25
+p1 = 7
 taux_annuel = 2/100.
 taux_annuel_p1 = 3.5/100.
-val_mens_fin, val_mens_debut = cal_mens_lisse(cal_frais_notaire(134000), 700, p1*12, duree_tot*12,
+mont_operation = cal_frais_notaire(155000)-155000+168000
+print "Montant opération : " + str(mont_operation)
+val_mens_fin, val_mens_debut = cal_mens_lisse(mont_operation, 635, p1*12, duree_tot*12,
                                               taux_annuel/12., taux_annuel_p1/12)
-
-print "Exemple de 134 000 sur 20 ans avec un palier de 500 après " + str(p1) + " ans. début : " + str(val_mens_debut) + " Fin : " + str(val_mens_fin)
+print "Frais de notaire : " + str(cal_frais_notaire(155000)-155000) 
+print "Exemple de 168 000 + frais de notaire sur 25 ans avec un palier de 500 après " + str(p1) + " ans. début : " + str(val_mens_debut) + " Fin : " + str(val_mens_fin)

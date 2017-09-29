@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/urwid/raw_display.py", line 526, in _wait_for_input_ready
+    fd_list, [], fd_list)
+error: (4, 'Appel syst\xc3\xa8me interrompu')
